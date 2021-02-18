@@ -40,6 +40,8 @@ def index(request):
 
             prob = prob*100
 
+            prob = round(prob, 2)
+
             if result == 1:
                 messages.error(
                     request, f'There is a {prob} % chance that you may have a stroke')
